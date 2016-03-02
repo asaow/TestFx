@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.SceneOneController">
+   <center>
+      <GridPane alignment="CENTER" hgap="20.0" prefHeight="366.0" prefWidth="600.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="197.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="463.0" minWidth="10.0" prefWidth="383.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginButtonAction" text="logga in" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="Edo" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="70.0" />
+               </GridPane.margin>
+            </Button>
+            <PasswordField GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="70.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <TextField GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets right="70.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="användarnamn" textFill="#777777" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Edo" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="lösenord" textFill="#777777" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Edo SZ" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Logga in" textFill="#777777" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Edo SZ" size="40.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

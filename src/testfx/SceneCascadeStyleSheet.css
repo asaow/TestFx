@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-feb-26, 23:35:41
+    Author     : Loki
+*/
+
+.root{
+    -fx-background-color: #ffffff;	
+}
+
+.button{
+    -fx-background-color:#707070;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color: #808080;
+}
+
+.button:focused {
+    -fx-background-color:#1d92b0;
+}
+
+
+#loginBtn.button:focused{
+    -fx-background-color:#707070;
+}
+
+#nextBtn.button:focused{
+    -fx-background-color:#707070;
+}
+
+#cancelBtn.button:focused{
+    -fx-background-color:#707070;
+}
+
+.table-view{
+   -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#505050 0%, #707070 100%);
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
