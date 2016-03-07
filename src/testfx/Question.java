@@ -17,9 +17,9 @@ package testfx;
     private String wrong1;
     private String wrong2;
     private String wrong3;
+    //private Boolean checked;
 
-
-    public Question(int courseId, int id, String question, String answer,String wrong1, String wrong2, String wrong3 ){
+    public Question(int courseId, int id, String question, String answer,String wrong1, String wrong2, String wrong3){
         this.courseId = courseId;
         this.id = id;
         this.question = question;
@@ -27,6 +27,7 @@ package testfx;
         this.wrong1 = wrong1;
         this.wrong2 = wrong2;
         this.wrong3 = wrong3;
+        //this.checked = checked;
         
     }
 
@@ -93,6 +94,14 @@ package testfx;
     public void setQuestion(String question) {
         this.question = question;
     }
+    
+//    public Boolean isChecked() {
+//        return checked;
+//    }
+//
+//    public void setChecked(Boolean checked) {
+//        this.checked = checked;
+//    }
 }
 
     

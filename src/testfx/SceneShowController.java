@@ -159,7 +159,7 @@ Course ccc = new Course(5, "helo", 9);
         course = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses")
                 .request()
                 .post(Entity.entity( ccc, MediaType.APPLICATION_JSON) , Course.class);
-        System.out.println(course.getName());
+        System.out.println("course: "+course.getName());
 //        }
 //        catch(Exception e)
 //        {

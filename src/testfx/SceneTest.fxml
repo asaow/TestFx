@@ -22,13 +22,35 @@
          <center>
             <VBox alignment="CENTER_LEFT" prefHeight="133.0" prefWidth="149.0" spacing="10.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="label" alignment="TOP_LEFT" prefHeight="70.0" prefWidth="560.0" text="Hur är läget?" textFill="#606060">
-                     <font>
-                        <Font name="Edo" size="30.0" />
-                     </font>
+                  <HBox alignment="TOP_RIGHT" prefHeight="67.0" prefWidth="580.0">
+                     <children>
+                        <Label fx:id="qLeft">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label text="/">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="total">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
                      <padding>
-                        <Insets left="10.0" />
+                        <Insets right="50.0" />
                      </padding>
+                  </HBox>
+                  <Label fx:id="label" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="Starta Prov!" textFill="#606060">
+                     <font>
+                        <Font name="Edo" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="50.0" />
+                     </VBox.margin>
                   </Label>
                   <RadioButton fx:id="radioBtn1" mnemonicParsing="false" text="RadioButton" />
                   <RadioButton fx:id="radioBtn2" mnemonicParsing="false" text="RadioButton" />
