@@ -58,7 +58,7 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="questionText">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -71,8 +71,8 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <CheckBox mnemonicParsing="false" text="Rätt" />
-                  <TextField>
+                  <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="Rätt" />
+                  <TextField fx:id="answerText1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -85,8 +85,8 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <CheckBox mnemonicParsing="false" text="Rätt" />
-                  <TextField>
+                  <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="Rätt" />
+                  <TextField fx:id="answerText2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -99,8 +99,8 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <CheckBox mnemonicParsing="false" text="Rätt" />
-                  <TextField prefWidth="300.0">
+                  <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="Rätt" />
+                  <TextField fx:id="answerText3" prefWidth="300.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -113,8 +113,8 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <CheckBox mnemonicParsing="false" text="Rätt" />
-                  <TextField prefWidth="300.0">
+                  <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="Rätt" />
+                  <TextField fx:id="answerText4" prefWidth="300.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -124,8 +124,8 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <CheckBox mnemonicParsing="false" text="Rätt" />
-                  <TextField prefWidth="300.0">
+                  <CheckBox fx:id="checkbox5" mnemonicParsing="false" text="Rätt" />
+                  <TextField fx:id="answerText5" prefWidth="300.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -135,8 +135,8 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <CheckBox mnemonicParsing="false" text="Rätt" />
-                  <TextField>
+                  <CheckBox fx:id="checkbox6" mnemonicParsing="false" text="Rätt" />
+                  <TextField fx:id="answerText6">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -150,7 +150,7 @@
                         </Button>
                         <Button fx:id="radioButton" mnemonicParsing="false" onAction="#showRadioButtonAction" text="Radiobutton" />
                         <Button mnemonicParsing="false" text="listview" />
-                        <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Lägg till">
+                        <Button fx:id="addButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#addQuestionButtonAction" text="Lägg till">
                            <font>
                               <Font name="Edo" size="20.0" />
                            </font>

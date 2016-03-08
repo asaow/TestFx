@@ -27,7 +27,7 @@
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="questionText">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -35,13 +35,13 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </TextField>
-                  <RadioButton mnemonicParsing="false" text="Rätt" />
+                  <RadioButton fx:id="radiobutton1" mnemonicParsing="false" text="Rätt" />
                   <Label text="Svar" textFill="#777777">
                      <font>
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="answerText1">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -49,13 +49,13 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </TextField>
-                  <RadioButton mnemonicParsing="false" text="Rätt" />
+                  <RadioButton fx:id="radiobutton2" mnemonicParsing="false" text="Rätt" />
                   <Label text="svar" textFill="#777777">
                      <font>
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="answerText2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -63,13 +63,13 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </TextField>
-                  <RadioButton mnemonicParsing="false" text="Rätt" />
+                  <RadioButton fx:id="radiobutton3" mnemonicParsing="false" text="Rätt" />
                   <Label text="svar" textFill="#777777">
                      <font>
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="300.0">
+                  <TextField fx:id="answerText3" prefWidth="300.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -77,13 +77,13 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </TextField>
-                  <RadioButton mnemonicParsing="false" text="Rätt" />
+                  <RadioButton fx:id="radiobutton4" mnemonicParsing="false" text="Rätt" />
                   <Label text="svar" textFill="#777777">
                      <font>
                         <Font name="Edo" size="16.0" />
                      </font>
                   </Label>
-                  <TextField>
+                  <TextField fx:id="answerText4">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -103,7 +103,7 @@
                            <children>
                               <Button mnemonicParsing="false" text="ordning" />
                               <Button fx:id="checkBoxButton" mnemonicParsing="false" onAction="#showCheckBoxButtonAction" text="CheckBox" />
-                              <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Lägg till">
+                              <Button fx:id="addButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#addQuestionButtonAction" text="Lägg till">
                                  <font>
                                     <Font name="Edo" size="20.0" />
                                  </font>

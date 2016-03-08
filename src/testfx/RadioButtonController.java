@@ -24,6 +24,7 @@ import javafx.stage.Stage;
  *
  * @author Loki
  */
+//används inte!!!
 public class RadioButtonController {
 
     @FXML

@@ -34,7 +34,7 @@ public class Question implements Serializable {
     
     private int id;
     private String question;
-    private int courseId;
+    private int courseId = 1;
     //private String answer;
     //private String wrong1;
     //private String wrong2;
