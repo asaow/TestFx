@@ -112,10 +112,7 @@ public class SceneTestController implements Initializable {
         qLeft.setText(""+min++);
         nextBtn.setText("Nästa");
 
-        radioBtn1.setText(question.getAnswer());
-        radioBtn2.setText(question.getWrong1());
-        radioBtn3.setText(question.getWrong2());
-        radioBtn4.setText(question.getWrong3());
+
         
         if(radioBtn1.isSelected()){
             points++;
@@ -171,7 +168,7 @@ public class SceneTestController implements Initializable {
 
     @FXML
     public void addQuestionsMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SceneTwo.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("RadioButtonScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
@@ -191,7 +188,7 @@ public class SceneTestController implements Initializable {
 
     @FXML
     public void showQuestionsMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SceneShow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("CheckBoxScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
@@ -237,18 +234,18 @@ public class SceneTestController implements Initializable {
             String w3string = (String) (row.get("wrong3"));
             question = new Question();
             question.setQuestion(qstring);
-            question.setAnswer(astring);
-            question.setWrong1(w1string);
-            question.setWrong2(w2string);
-            question.setWrong3(w3string);
+//            question.setAnswer(astring);
+//            question.setWrong1(w1string);
+//            question.setWrong2(w2string);
+//            question.setWrong3(w3string);
 
             questionList.add(question);
             
             label.setText(question.getQuestion());
-            radioBtn1.setText(question.getAnswer());
-            radioBtn2.setText(question.getWrong1());
-            radioBtn3.setText(question.getWrong2());
-            radioBtn4.setText(question.getWrong3());
+//            radioBtn1.setText(question.getAnswer());
+//            radioBtn2.setText(question.getWrong1());
+//            radioBtn3.setText(question.getWrong2());
+//            radioBtn4.setText(question.getWrong3());
 
         }
  

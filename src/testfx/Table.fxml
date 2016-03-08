@@ -125,17 +125,17 @@
                         <Font name="AppleGothic Regular" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="showTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa Prov">
-                     <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
-                     </font>
-                  </Button>
                   <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Table">
                      <font>
                         <Font name="AppleGothic Regular" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="showQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Button">
+                     <font>
+                        <Font name="AppleGothic Regular" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Button">
                      <font>
                         <Font name="AppleGothic Regular" size="14.0" />
                      </font>

@@ -25,6 +25,8 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Loki
  */
+
+//Startsida
 public class SceneController implements Initializable {
 
     @FXML
@@ -46,7 +48,7 @@ public class SceneController implements Initializable {
     
     @FXML
     public void addQuestionsMenuButtonAction(ActionEvent event) throws IOException{
-       Parent root = FXMLLoader.load(getClass().getResource("SceneTwo.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("RadioButtonScene.fxml"));
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
@@ -54,25 +56,25 @@ public class SceneController implements Initializable {
             stage.show(); 
     }
     
-     @FXML
-    public void showQuestionsMenuButtonAction(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("SceneTest.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show(); 
-    }
+//     @FXML
+//    public void showQuestionsMenuButtonAction(ActionEvent event) throws IOException{
+//        Parent root = FXMLLoader.load(getClass().getResource("CheckBoxScene.fxml"));
+//            Scene scene = new Scene(root);
+//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+//            stage.setScene(scene);
+//            stage.show(); 
+//    }
     
-    @FXML
-    public void showTestMenuButtonAction(ActionEvent event) throws IOException{
-       Parent root = FXMLLoader.load(getClass().getResource("SceneTest.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show(); 
-    }
+//    @FXML
+//    public void showTestMenuButtonAction(ActionEvent event) throws IOException{
+//       Parent root = FXMLLoader.load(getClass().getResource("SceneTest.fxml"));
+//            Scene scene = new Scene(root);
+//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+//            stage.setScene(scene);
+//            stage.show(); 
+//    }
     
     @FXML
     public void showTableMenuButtonAction(ActionEvent event) throws IOException{

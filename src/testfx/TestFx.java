@@ -26,7 +26,7 @@ public class TestFx extends Application {
     public void start(Stage stage) throws Exception {
           
         client = ClientBuilder.newClient();    
-        Parent root = FXMLLoader.load(getClass().getResource("SceneShow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
         stage.setScene(scene);
