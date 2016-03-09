@@ -14,10 +14,11 @@
          <center>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <ListView fx:id="list1" prefHeight="550.0" prefWidth="260.0">
-                     <HBox.margin>
-                        <Insets top="50.0" />
-                     </HBox.margin></ListView>
+                  <TableView fx:id="table1" prefHeight="600.0" prefWidth="250.0">
+                    <columns>
+                      <TableColumn fx:id="col1" prefWidth="249.0" text="Frågor" />
+                    </columns>
+                  </TableView>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                      <children>
                         <Button fx:id="toRightButton" mnemonicParsing="false" onAction="#toRightAction" prefHeight="41.0" prefWidth="70.0" text="&gt;">
@@ -38,10 +39,11 @@
                         </Button>
                      </children>
                   </VBox>
-                  <ListView fx:id="list2" prefHeight="550.0" prefWidth="260.0">
-                     <HBox.margin>
-                        <Insets top="50.0" />
-                     </HBox.margin></ListView>
+                  <TableView fx:id="table2" prefHeight="600.0" prefWidth="250.0">
+                    <columns>
+                        <TableColumn fx:id="col2" prefWidth="249.0" text="Valda frågor" />
+                    </columns>
+                  </TableView>
                </children>
             </HBox>
          </center>

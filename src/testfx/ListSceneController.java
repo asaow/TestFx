@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,6 +23,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
@@ -46,10 +51,16 @@ public class ListSceneController implements Initializable {
     private Button toLeftButton;
     @FXML
     private Button toRightButton;
+    
     @FXML
-    private ListView list1;
+    private TableView<Question> table1;
+
     @FXML
-    private ListView list2;
+    private TableView<Question> table2;
+    @FXML
+    private TableColumn<Question, String> col1;
+    @FXML
+    private TableColumn<Question, String> col2;
 
     ObservableList<Question> listLeft;
     ObservableList<Question> listRight;
@@ -57,7 +68,7 @@ public class ListSceneController implements Initializable {
 
     @FXML
     public void toLeftAction(ActionEvent event) {
-        Question selectedItem = (Question) list2.getSelectionModel().getSelectedItem();
+        Question selectedItem = (Question) table2.getSelectionModel().getSelectedItem();
 
         if (selectedItem != null) {
             listRight.remove(selectedItem);
@@ -65,11 +76,10 @@ public class ListSceneController implements Initializable {
         }
 
     }
-    
-  
+
     @FXML
     public void toRightAction(ActionEvent event) {
-        Question selectedItem = (Question) list1.getSelectionModel().getSelectedItem();
+        Question selectedItem = (Question) table1.getSelectionModel().getSelectedItem();
 
         if (selectedItem != null) {
             listLeft.remove(selectedItem);
@@ -114,68 +124,40 @@ public class ListSceneController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         listLeft = FXCollections.observableArrayList();
         listRight = FXCollections.observableArrayList();
-        GenericType<List<Question>> gt   = new GenericType<List<Question>>(){};
+        
+        GenericType<List<Question>> gt = new GenericType<List<Question>>() {
+        };
         List<Question> c;
         c = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
                 .request(MediaType.APPLICATION_JSON)
                 .get(gt);
         System.out.println(c);
-        
-        for(Question q : c){
+
+        for (Question q : c) {
             q.getQuestion();
             System.out.println(q.getQuestion());
             listLeft.add(q);
-
         }
-       
-        
-            list1.setItems(listLeft);
-            list2.setItems(listRight);
-            Gson gson = new Gson();
-          //  Question o = gson.fromJson(c, Question.class);
-        //        System.out.println(o);
-        
-        //    Question q = gson.fromJson(c, Question.class);
-//            q = (Question) array.get(i);
-//            System.out.println(q.getQuestion());
-        
-//        JSONArray array = null;
-//
-//        JSONParser parser = new JSONParser();
-//        try {
-//            Object object = parser.parse(c);
-//            array = (JSONArray) object;
-//
-//        } catch (Exception e) {
-//
-//        }
-//        for (int i = 0; i < array.size(); i++) {
 
-        // list for all questions
-
-
+        col1.setCellValueFactory(new PropertyValueFactory<Question, String>("question"));
+        col2.setCellValueFactory(new PropertyValueFactory<Question, String>("question"));
         
-        // JSONObject row = (JSONObject) array.get(i);
+        col1.setCellFactory(TextFieldTableCell.forTableColumn());
+        col2.setCellFactory(TextFieldTableCell.forTableColumn());
+
+        col1.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
+            public void handle(TableColumn.CellEditEvent<Question, String> t) {
+                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setQuestion(t.getNewValue());
+            }
+        });
+
+        col2.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
+            public void handle(TableColumn.CellEditEvent<Question, String> t) {
+                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setQuestion(t.getNewValue());
+            }
+        });
         
-        //   for (Object o : array) {
-  
-    //        }
-//           
-//            Number id = (Number) row.get("id");
-//            String que = (String) (row.get("question"));
-//
-//            question = new Question();
-//            question.setId(id.intValue());
-//            question.setQuestion(que);
-//            listLeft.add(question);
-//
-      
-   
-            
-            
-
-         
-       // }
-
+        table1.setItems(listLeft);
+        table2.setItems(listRight);
     }
 }
