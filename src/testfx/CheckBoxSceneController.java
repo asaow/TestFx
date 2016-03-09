@@ -58,6 +58,9 @@ public class CheckBoxSceneController implements Initializable {
     private CheckBox checkbox6;
     @FXML
     private Button addButton;
+    @FXML
+    private Button createTestMenuButton;
+    
     Question question;
 
     @FXML
@@ -113,14 +116,13 @@ public class CheckBoxSceneController implements Initializable {
         } else {
             answer6.setCorrect(Boolean.FALSE);
         }
-        
+
         question.getAnswer().add(answer1);
         question.getAnswer().add(answer2);
         question.getAnswer().add(answer3);
         question.getAnswer().add(answer4);
         question.getAnswer().add(answer5);
         question.getAnswer().add(answer6);
-
 
         Question q;
         q = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
@@ -136,7 +138,7 @@ public class CheckBoxSceneController implements Initializable {
         answerText4.clear();
         answerText5.clear();
         answerText6.clear();
-        
+
         checkbox1.setSelected(false);
         checkbox2.setSelected(false);
         checkbox3.setSelected(false);
@@ -144,74 +146,67 @@ public class CheckBoxSceneController implements Initializable {
         checkbox5.setSelected(false);
         checkbox6.setSelected(false);
 
-
     }
-        @FXML
-        private Button radioButton;
+    @FXML
+    private Button radioButton;
 
-        @FXML
-        public void cancelButtonAction
-        (ActionEvent event) throws IOException
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show();
-        }
+    @FXML
+    public void cancelButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        @FXML
-        public void showTableMenuButtonAction
-        (ActionEvent event) throws IOException
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show();
-        }
+    @FXML
+    public void showTableMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        @FXML
-        public void homeMenuButtonAction
-        (ActionEvent event) throws IOException
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show();
-        }
+    @FXML
+    public void createTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ListScene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        @FXML
-        public void showRadioButtonAction
-        (ActionEvent event) throws IOException
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("RadioButtonScene.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show();
-        }
-        /**
-         * Initializes the controller class.
-         */
-        @Override
-        public void initialize
-        (URL url, ResourceBundle rb
-        
-        
-    
+    @FXML
+    public void homeMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        
-        
-    
+    @FXML
+    public void showRadioButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("RadioButtonScene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
 
-) {
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb
+    ) {
         // TODO
-    }    
-    
+    }
+
 }

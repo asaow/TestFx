@@ -17,27 +17,22 @@
                <children>
                   <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Meny">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
                   <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
                   <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Table">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Button">
+                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Skapa test">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Button">
-                     <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
                </children>

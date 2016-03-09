@@ -35,6 +35,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.CheckBoxTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import static javafx.scene.input.KeyCode.T;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.converter.IntegerStringConverter;
@@ -42,6 +43,7 @@ import javax.json.Json;
 import javax.json.JsonNumber;
 import javax.json.JsonObject;
 import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.json.simple.JSONArray;
@@ -66,6 +68,8 @@ public class TableController implements Initializable {
     private Button showTestMenuButton;
     @FXML
     private Button homeMenuButton;
+    @FXML
+    private Button createTestMenuButton;
     @FXML
     private Button createTestButton;
     @FXML
@@ -201,8 +205,8 @@ public class TableController implements Initializable {
     }
 
     @FXML
-    public void showQuestionsMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("CheckBoxScene.fxml"));
+    public void createTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ListScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
@@ -219,6 +223,7 @@ public class TableController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    
 
     @FXML
     public void homeMenuButtonAction(ActionEvent event) throws IOException {
@@ -237,6 +242,7 @@ public class TableController implements Initializable {
 //        c = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
 //                .request(MediaType.APPLICATION_JSON)
 //                .get(String.class);
+//        System.out.println(c);
 //        JSONArray array = null;
 //
 //        JSONParser parser = new JSONParser();

@@ -10,7 +10,228 @@
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.CheckBoxSceneController">
    <children>
-      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="CENTER_LEFT" prefHeight="594.0" prefWidth="540.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="133.0" prefWidth="600.0">
+                     <children>
+                        <Label prefHeight="80.0" prefWidth="384.0" text="Lägg till checkbox fråga" textFill="#555555">
+                           <font>
+                              <Font name="Hiragino Sans W0" size="30.0" />
+                           </font>
+                        </Label>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="99.0" prefWidth="211.0">
+                           <children>
+                              <Button fx:id="radioButton" alignment="CENTER" mnemonicParsing="false" onAction="#showRadioButtonAction" prefHeight="40.0" prefWidth="110.0" text="Radiobutton">
+                                 <font>
+                                    <Font name="Hiragino Sans W2" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="110.0" text="Ranka">
+                                 <font>
+                                    <Font name="Hiragino Sans W2" size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Fråga" textFill="#777777">
+                     <font>
+                        <Font name="Edo" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="questionText">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="17.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+                     <children>
+                        <Label text="svar " textFill="#777777">
+                           <font>
+                              <Font name="Edo" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="Rätt">
+                           <font>
+                              <Font name="Hiragino Sans W1" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="answerText1">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Svar " textFill="#777777">
+                           <font>
+                              <Font name="Edo" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="Rätt">
+                           <font>
+                              <Font name="Hiragino Sans W1" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="answerText2">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Svar " textFill="#777777">
+                           <font>
+                              <Font name="Edo" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="Rätt">
+                           <font>
+                              <Font name="Hiragino Sans W1" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="answerText3" prefWidth="300.0">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+                     <children>
+                        <Label text="Svar " textFill="#777777">
+                           <font>
+                              <Font name="Edo" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="Rätt">
+                           <font>
+                              <Font name="Hiragino Sans W1" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="answerText4" prefWidth="300.0">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+                     <children>
+                        <Label text="svar " textFill="#777777">
+                           <font>
+                              <Font name="Edo" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="checkbox5" mnemonicParsing="false" text="Rätt">
+                           <font>
+                              <Font name="Hiragino Sans W1" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="answerText5" prefWidth="300.0">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="12.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="600.0">
+                     <children>
+                        <Label text="svar " textFill="#777777">
+                           <font>
+                              <Font name="Edo" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="checkbox6" mnemonicParsing="false" text="Rätt">
+                           <font>
+                              <Font name="Hiragino Sans W1" size="13.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="answerText6">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                  </TextField>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="480.0">
+                     <children>
+                        <Button fx:id="cancelButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="74.0" text="Avbryt">
+                           <font>
+                              <Font name="Hiragino Sans W2" size="14.0" />
+                           </font>
+                        </Button>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="66.0" prefWidth="488.0">
+                           <children>
+                              <Button fx:id="addButton" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#addQuestionButtonAction" prefHeight="40.0" prefWidth="93.0" text="Lägg till">
+                                 <font>
+                                    <Font name="Hiragino Sans W2" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="104.0" text="Visa prov">
+                                 <font>
+                                    <Font name="Hiragino Sans W1" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
          <left>
             <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #707070;" BorderPane.alignment="CENTER">
                <children>
@@ -19,158 +240,24 @@
                         <Font name="AppleGothic Regular" size="20.0" />
                      </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Lägg till frågor">
+                  <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Lägg till frågor">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
                   <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Table">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Button">
+                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Skapa test">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Button">
-                     <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
                </children>
             </VBox>
          </left>
-         <center>
-            <VBox alignment="CENTER_LEFT" prefHeight="594.0" prefWidth="540.0" BorderPane.alignment="CENTER_LEFT">
-               <children>
-                  <Label alignment="TOP_LEFT" text="Lägg till fråga (Checkbox)" textFill="#555555">
-                     <font>
-                        <Font name="ACaslonPro-Regular" size="30.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Fråga" textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="questionText">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </TextField>
-                  <Label text="svar " textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
-                  </Label>
-                  <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="Rätt" />
-                  <TextField fx:id="answerText1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </TextField>
-                  <Label text="Svar " textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
-                  </Label>
-                  <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="Rätt" />
-                  <TextField fx:id="answerText2">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </TextField>
-                  <Label text="Svar " textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
-                  </Label>
-                  <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="Rätt" />
-                  <TextField fx:id="answerText3" prefWidth="300.0">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </TextField>
-                  <Label text="Svar " textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
-                  </Label>
-                  <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="Rätt" />
-                  <TextField fx:id="answerText4" prefWidth="300.0">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <Label text="svar " textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
-                  </Label>
-                  <CheckBox fx:id="checkbox5" mnemonicParsing="false" text="Rätt" />
-                  <TextField fx:id="answerText5" prefWidth="300.0">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <Label text="svar " textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
-                  </Label>
-                  <CheckBox fx:id="checkbox6" mnemonicParsing="false" text="Rätt" />
-                  <TextField fx:id="answerText6">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="480.0">
-                     <children>
-                        <Button fx:id="cancelButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelButtonAction" text="Avbryt">
-                           <font>
-                              <Font name="Edo" size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="radioButton" mnemonicParsing="false" onAction="#showRadioButtonAction" text="Radiobutton" />
-                        <Button mnemonicParsing="false" text="listview" />
-                        <Button fx:id="addButton" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#addQuestionButtonAction" text="Lägg till">
-                           <font>
-                              <Font name="Edo" size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="20.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" text="Visa prov">
-                           <font>
-                              <Font name="Edo" size="20.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-               <BorderPane.margin>
-                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-               </BorderPane.margin>
-            </VBox>
-         </center>
       </BorderPane>
    </children>
 </AnchorPane>

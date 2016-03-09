@@ -69,7 +69,8 @@ public class SceneTwoController implements Initializable {
     private Button addButton;
     @FXML
     private Button menuAddBtn;
-
+    @FXML
+    private Button createTestMenuButton;
     @FXML
     private Button homeMenuButton;
     @FXML
@@ -82,6 +83,7 @@ public class SceneTwoController implements Initializable {
     private RadioButton radiobutton3;
     @FXML
     private RadioButton radiobutton4;
+    
 
     Question question;
 
@@ -153,15 +155,15 @@ public class SceneTwoController implements Initializable {
         stage.show();
     }
 
-//     @FXML
-//    public void showTestMenuButtonAction(ActionEvent event) throws IOException{
-//       Parent root = FXMLLoader.load(getClass().getResource("SceneTest.fxml"));
-//            Scene scene = new Scene(root);
-//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-//            stage.setScene(scene);
-//            stage.show(); 
-//    }
+    @FXML
+    public void createTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ListScene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
     @FXML
     public void showTableMenuButtonAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));

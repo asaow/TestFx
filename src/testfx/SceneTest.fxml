@@ -92,22 +92,22 @@
                   </Button>
                   <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Visa Prov">
-                     <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
                   <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Table">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="showQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Skapa prov">
                      <font>
-                        <Font name="AppleGothic Regular" size="14.0" />
+                        <Font name="Hiragino Sans W1" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Visa prov">
+                     <font>
+                        <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
                </children>

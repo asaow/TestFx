@@ -26,17 +26,9 @@ and open the template in the editor.
 }
 
 
-#loginBtn.button:focused{
-    -fx-background-color:#707070;
-}
 
-#nextBtn.button:focused{
-    -fx-background-color:#707070;
-}
 
-#cancelBtn.button:focused{
-    -fx-background-color:#707070;
-}
+
 
 .table-view{
    -fx-background-color: transparent;
