@@ -5,12 +5,7 @@
  */
 package testfx;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonParser;
-import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
@@ -25,17 +20,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+import static testfx.Question.RADIO_TYPE;
 
 /**
  * FXML Controller class
@@ -83,13 +73,13 @@ public class SceneTwoController implements Initializable {
     private RadioButton radiobutton3;
     @FXML
     private RadioButton radiobutton4;
-    
 
     Question question;
 
     @FXML
     public void addQuestionButtonAction(ActionEvent event) throws IOException {
         question = new Question();
+        question.setType(RADIO_TYPE);
         question.setQuestion(questionText.getText());
 
         Answer answer1 = new Answer();
@@ -126,10 +116,10 @@ public class SceneTwoController implements Initializable {
             answer4.setCorrect(Boolean.FALSE);
         }
 
-        question.getAnswer().add(answer1);
-        question.getAnswer().add(answer2);
-        question.getAnswer().add(answer3);
-        question.getAnswer().add(answer4);
+        question.getAnswers().add(answer1);
+        question.getAnswers().add(answer2);
+        question.getAnswers().add(answer3);
+        question.getAnswers().add(answer4);
 
         Question q;
         q = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
@@ -143,6 +133,7 @@ public class SceneTwoController implements Initializable {
         answerText2.clear();
         answerText3.clear();
         answerText4.clear();
+
     }
 
     @FXML
@@ -164,6 +155,7 @@ public class SceneTwoController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
     public void showTableMenuButtonAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));
@@ -204,6 +196,8 @@ public class SceneTwoController implements Initializable {
         radiobutton2.setToggleGroup(radioGroup);
         radiobutton3.setToggleGroup(radioGroup);
         radiobutton4.setToggleGroup(radioGroup);
+
+        radiobutton1.setSelected(true);
 
     }
 

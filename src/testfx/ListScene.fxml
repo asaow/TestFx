@@ -29,7 +29,7 @@
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Skapa test">
+                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Skapa prov">
                      <font>
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
@@ -77,7 +77,7 @@
                         </TableView>
                      </children>
                   </HBox>
-                  <Button alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="47.0" prefWidth="113.0" text="Skapa prov!">
+                  <Button fx:id="createButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#createTestAction" prefHeight="47.0" prefWidth="113.0" text="Skapa prov!">
                      <font>
                         <Font name="Hiragino Sans W1" size="16.0" />
                      </font>

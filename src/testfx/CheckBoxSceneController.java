@@ -21,6 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
+import static testfx.Question.CHECKBOX_TYPE;
 
 /**
  * FXML Controller class
@@ -66,6 +67,7 @@ public class CheckBoxSceneController implements Initializable {
     @FXML
     public void addQuestionButtonAction(ActionEvent event) throws IOException {
         question = new Question();
+        question.setType(CHECKBOX_TYPE);
         question.setQuestion(questionText.getText());
 
         Answer answer1 = new Answer();
@@ -73,14 +75,12 @@ public class CheckBoxSceneController implements Initializable {
         Answer answer3 = new Answer();
         Answer answer4 = new Answer();
         Answer answer5 = new Answer();
-        Answer answer6 = new Answer();
 
         answer1.setAnswer(answerText1.getText());
         answer2.setAnswer(answerText2.getText());
         answer3.setAnswer(answerText3.getText());
         answer4.setAnswer(answerText4.getText());
         answer5.setAnswer(answerText5.getText());
-        answer6.setAnswer(answerText6.getText());
 
         if (checkbox1.isSelected()) {
             answer1.setCorrect(Boolean.TRUE);
@@ -111,18 +111,13 @@ public class CheckBoxSceneController implements Initializable {
         } else {
             answer5.setCorrect(Boolean.FALSE);
         }
-        if (checkbox6.isSelected()) {
-            answer6.setCorrect(Boolean.TRUE);
-        } else {
-            answer6.setCorrect(Boolean.FALSE);
-        }
 
-        question.getAnswer().add(answer1);
-        question.getAnswer().add(answer2);
-        question.getAnswer().add(answer3);
-        question.getAnswer().add(answer4);
-        question.getAnswer().add(answer5);
-        question.getAnswer().add(answer6);
+
+        question.getAnswers().add(answer1);
+        question.getAnswers().add(answer2);
+        question.getAnswers().add(answer3);
+        question.getAnswers().add(answer4);
+        question.getAnswers().add(answer5);
 
         Question q;
         q = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
@@ -137,14 +132,12 @@ public class CheckBoxSceneController implements Initializable {
         answerText3.clear();
         answerText4.clear();
         answerText5.clear();
-        answerText6.clear();
 
         checkbox1.setSelected(false);
         checkbox2.setSelected(false);
         checkbox3.setSelected(false);
         checkbox4.setSelected(false);
         checkbox5.setSelected(false);
-        checkbox6.setSelected(false);
 
     }
     @FXML

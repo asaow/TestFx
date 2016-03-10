@@ -5,7 +5,6 @@
  */
 package testfx;
 
-import com.google.gson.Gson;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -51,6 +50,8 @@ public class ListSceneController implements Initializable {
     private Button toLeftButton;
     @FXML
     private Button toRightButton;
+    @FXML
+    private Button createButton;
     
     @FXML
     private TableView<Question> table1;
@@ -64,6 +65,7 @@ public class ListSceneController implements Initializable {
 
     ObservableList<Question> listLeft;
     ObservableList<Question> listRight;
+    List<Question> newList;
     Question question;
 
     @FXML
@@ -86,6 +88,23 @@ public class ListSceneController implements Initializable {
             listRight.add(selectedItem);
         }
     }
+    
+//    public class Test(){
+//    private List<Question> list;
+//    gener
+//    private int id;
+//    get och set
+//            
+//}
+    
+    @FXML
+    public void createTestAction(ActionEvent event) {
+            listLeft.addAll(listRight);
+            listRight.clear();
+
+       // Test t = new Test ();
+        //test.add(listLeft);
+ }
 
     @FXML
     public void addQuestionsMenuButtonAction(ActionEvent event) throws IOException {
@@ -122,6 +141,7 @@ public class ListSceneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        newList = new ArrayList();
         listLeft = FXCollections.observableArrayList();
         listRight = FXCollections.observableArrayList();
         

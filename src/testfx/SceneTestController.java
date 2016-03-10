@@ -103,6 +103,7 @@ public class SceneTestController implements Initializable {
         return copy.subList(0, n);
     }
 
+
     @FXML
     public void nextQuestionAction(ActionEvent event) {
         int nr = Integer.parseInt(total.getText());

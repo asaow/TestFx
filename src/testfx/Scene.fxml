@@ -25,12 +25,12 @@
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Table">
+                  <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
                      <font>
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Skapa test">
+                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Prov">
                      <font>
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>

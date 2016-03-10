@@ -21,23 +21,7 @@
                               <Font name="Hiragino Sans W0" size="30.0" />
                            </font>
                         </Label>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="98.0" prefWidth="168.0">
-                           <children>
-                              <Button fx:id="checkBoxButton" mnemonicParsing="false" onAction="#showCheckBoxButtonAction" prefHeight="40.0" prefWidth="100.0" text="CheckBox">
-                                 <font>
-                                    <Font name="Hiragino Sans W2" size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="15.0" />
-                                 </VBox.margin>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Ranka">
-                                 <font>
-                                    <Font name="Hiragino Sans W2" size="14.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="98.0" prefWidth="168.0" />
                      </children>
                   </HBox>
                   <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Fråga" textFill="#777777">
@@ -79,7 +63,7 @@
                   </TextField>
                   <HBox prefHeight="25.0" prefWidth="600.0">
                      <children>
-                        <Label text="svar" textFill="#777777">
+                        <Label text="Svar" textFill="#777777">
                            <font>
                               <Font name="Edo" size="16.0" />
                            </font>
@@ -103,7 +87,7 @@
                   </TextField>
                   <HBox prefHeight="25.0" prefWidth="600.0">
                      <children>
-                        <Label text="svar" textFill="#777777">
+                        <Label text="Svar" textFill="#777777">
                            <font>
                               <Font name="Edo" size="16.0" />
                            </font>
@@ -127,7 +111,7 @@
                   </TextField>
                   <HBox prefHeight="25.0" prefWidth="600.0">
                      <children>
-                        <Label text="svar" textFill="#777777">
+                        <Label text="Svar" textFill="#777777">
                            <font>
                               <Font name="Edo" size="16.0" />
                            </font>
@@ -160,7 +144,7 @@
                               </Button>
                               <HBox alignment="BOTTOM_RIGHT" prefHeight="93.0" prefWidth="459.0">
                                  <children>
-                                    <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addQuestionButtonAction" prefHeight="40.0" prefWidth="104.0" text="Lägg till">
+                                    <Button fx:id="checkBoxButton" mnemonicParsing="false" onAction="#showCheckBoxButtonAction" prefHeight="40.0" prefWidth="100.0" text="CheckBox">
                                        <font>
                                           <Font name="Hiragino Sans W2" size="14.0" />
                                        </font>
@@ -168,10 +152,13 @@
                                           <Insets right="20.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Button contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="119.0" text="Visa prov">
+                                    <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addQuestionButtonAction" prefHeight="40.0" prefWidth="104.0" text="Lägg till">
                                        <font>
                                           <Font name="Hiragino Sans W2" size="14.0" />
                                        </font>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
                                     </Button>
                                  </children>
                               </HBox>
@@ -198,12 +185,12 @@
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Table">
+                  <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
                      <font>
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Skapa test">
+                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Prov">
                      <font>
                         <Font name="Hiragino Sans W1" size="15.0" />
                      </font>
