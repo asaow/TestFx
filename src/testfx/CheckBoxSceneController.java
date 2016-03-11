@@ -138,7 +138,16 @@ public class CheckBoxSceneController implements Initializable {
 
     }
 
-
+    @FXML
+    public void ButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     @FXML
     public void cancelButtonAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
@@ -193,8 +202,7 @@ public class CheckBoxSceneController implements Initializable {
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb
-    ) {
+    public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
 

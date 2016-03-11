@@ -7,8 +7,6 @@ package testfx;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,8 +51,6 @@ public class SceneTwoController implements Initializable {
     private Button cancelButton;
     @FXML
     private Button checkBoxButton;
-    @FXML
-    private Label label;
     @FXML
     private Button addButton;
     @FXML
@@ -123,7 +119,6 @@ public class SceneTwoController implements Initializable {
 
         Question q;
         q = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
-                // .path(courseIdText.getText()+"questions")
                 .request()
                 .post(Entity.entity(question, MediaType.APPLICATION_JSON), Question.class);
         System.out.println(q.getQuestion());

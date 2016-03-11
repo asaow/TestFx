@@ -7,8 +7,6 @@ package testfx;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -67,7 +65,7 @@ public class TableController implements Initializable {
 
     // Deletes a question when selected from the tableView
     @FXML
-    private void deleteQuestion(ActionEvent event) throws IOException {
+    public void deleteQuestion(ActionEvent event) throws IOException {
         Question selected = (Question) tableView.getSelectionModel().getSelectedItem();
         questionList.remove(selected);
 

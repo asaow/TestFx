@@ -34,10 +34,7 @@ public class StartTestSceneController implements Initializable {
     @FXML
     private Button radioTestButton;
     @FXML
-    private Button checkBoxTestButton;
-    
-    List<Question> questionList;
-    
+    private Button checkBoxTestButton;    
             
     @FXML
     public void showTestMenuButtonAction(ActionEvent event) throws IOException {

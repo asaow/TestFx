@@ -5,20 +5,14 @@
  */
 package testfx;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
+
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,15 +27,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Entity;
-import static javax.ws.rs.client.Entity.json;
-import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
-import org.json.simple.*;
-import org.json.simple.parser.JSONParser;
 import static testfx.Question.RADIO_TYPE;
 
 /**
@@ -66,8 +53,6 @@ public class SceneTestController implements Initializable {
     @FXML
     private Button nextBtn;
     @FXML
-    private TextArea textarea;
-    @FXML
     private Button cancelBtn;
     @FXML
     private Label label;
@@ -88,21 +73,6 @@ public class SceneTestController implements Initializable {
     int min = 1;
     private Question question;
     int points = 0;
-//
-//    public void setIndex(int index) {
-//        this.index = index;
-//    }
-//
-//    public int getIndex() {
-//        return index;
-//    }
-
-    //metod där vi väljer x antal frågor från listan som ska shufflas
-    public static List<Question> pickNRandom(ObservableList<Question> lst, int n) {
-        List<Question> copy = new LinkedList<Question>(lst);
-        Collections.shuffle(copy);
-        return copy.subList(0, n);
-    }
 
     @FXML
     public void nextQuestionAction(ActionEvent event) {
@@ -138,7 +108,7 @@ public class SceneTestController implements Initializable {
             radioBtn3.setSelected(false);
             radioBtn4.setSelected(false);
 
-        } //beräkna resultat och byta text på 
+        } //beräkna resultat och byta text på label
         else {
             label.setText("Du hade " + points + " rätt av " + radioList.size() + " frågor!");
             nextBtn.setVisible(false);
@@ -206,8 +176,6 @@ public class SceneTestController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //label.setWrapText(true);
-
         ToggleGroup radioGroup = new ToggleGroup();
         radioBtn1.setToggleGroup(radioGroup);
         radioBtn2.setToggleGroup(radioGroup);

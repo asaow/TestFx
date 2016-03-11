@@ -17,8 +17,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.core.MediaType;
 
 /**
  * FXML Controller class

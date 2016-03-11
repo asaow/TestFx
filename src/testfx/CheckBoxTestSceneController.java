@@ -117,7 +117,7 @@ public class CheckBoxTestSceneController implements Initializable {
             checkbox2.setSelected(false);
             checkbox3.setSelected(false);
             checkbox4.setSelected(false);
-            checkbox5.setVisible(false);
+            checkbox5.setSelected(false);
 
         } //visa resultat och dölj knappar mm 
         else {
