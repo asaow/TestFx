@@ -77,6 +77,7 @@ public class StartTestSceneController implements Initializable {
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
+       
     }
 
     @FXML

@@ -68,7 +68,7 @@
                </font></RadioButton>
             <HBox alignment="BOTTOM_LEFT" prefHeight="70.0" prefWidth="600.0">
                <children>
-                  <Button fx:id="cancelBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
+                  <Button fx:id="cancelBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
                      <font>
                         <Font name="Hiragino Sans W1" size="16.0" />
                      </font>

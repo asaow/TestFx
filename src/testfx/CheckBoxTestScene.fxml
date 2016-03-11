@@ -40,7 +40,7 @@
          <children>
             <HBox alignment="TOP_RIGHT" prefHeight="67.0" prefWidth="580.0">
                <children>
-                  <Label prefHeight="50.0" prefWidth="60.0" textFill="#606060">
+                  <Label fx:id="qLeft" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -50,7 +50,7 @@
                         <Font size="35.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
+                  <Label fx:id="total" alignment="CENTER" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -60,39 +60,39 @@
                   <Insets right="50.0" />
                </padding>
             </HBox>
-            <Label alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="CheckBox fråga" textFill="#606060" wrapText="true">
+            <Label fx:id="label" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="CheckBox fråga" textFill="#606060" wrapText="true">
                <font>
                   <Font name="Hiragino Sans W2" size="24.0" />
                </font>
             </Label>
-            <CheckBox mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="CheckBox">
                <font>
                   <Font name="Hiragino Sans W2" size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="CheckBox">
                <font>
                   <Font name="Hiragino Sans W2" size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="CheckBox">
                <font>
                   <Font name="Hiragino Sans W2" size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="CheckBox">
                <font>
                   <Font name="Hiragino Sans W2" size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox mnemonicParsing="false" text="CheckBox">
+            <CheckBox fx:id="checkbox5" mnemonicParsing="false" text="CheckBox">
                <font>
                   <Font name="Hiragino Sans W2" size="16.0" />
                </font>
             </CheckBox>
             <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
                      <HBox.margin>
                         <Insets right="40.0" />
                      </HBox.margin>
@@ -100,7 +100,7 @@
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Nästa">
+                  <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextQuestionAction" prefHeight="40.0" prefWidth="85.0" text="Nästa">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>

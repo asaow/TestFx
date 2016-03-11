@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -78,23 +79,24 @@ public class SceneTestController implements Initializable {
     private RadioButton radioBtn3;
     @FXML
     private RadioButton radioBtn4;
-    
+
     private List<Question> radioList;
-    public int index;
-    int count = 0;
+    private List<Answer> answerList;
+
+    int index;
+    int count;
     int min = 1;
-    private ObservableList<Question> questionList;
     private Question question;
     int points = 0;
-    
-    public void setIndex(int index) {
-        this.index = index;
-    }
+//
+//    public void setIndex(int index) {
+//        this.index = index;
+//    }
+//
+//    public int getIndex() {
+//        return index;
+//    }
 
-    public int getIndex() {
-        return index;
-    }
-    
     //metod där vi väljer x antal frågor från listan som ska shufflas
     public static List<Question> pickNRandom(ObservableList<Question> lst, int n) {
         List<Question> copy = new LinkedList<Question>(lst);
@@ -102,62 +104,62 @@ public class SceneTestController implements Initializable {
         return copy.subList(0, n);
     }
 
-
     @FXML
     public void nextQuestionAction(ActionEvent event) {
-        
-        
-        
-//        int nr = Integer.parseInt(total.getText());
-//        List<Question> randomPicks = pickNRandom(questionList, nr);
-//        question = randomPicks.get(count++);
-//        label.setText(question.getQuestion());
-//        qLeft.setText(""+min++);
-//        nextBtn.setText("Nästa");
-//
-//
-//        
-//        if(radioBtn1.isSelected()){
-//            points++;
-//        }
-//        
-//        if(count == randomPicks.size()){
-//        nextBtn.setText("OK");
-//        label.setText("Du hade " + points + " rätt av " + index + " frågor!");
-//        radioBtn1.setVisible(false);
-//        radioBtn2.setVisible(false);
-//        radioBtn3.setVisible(false);
-//        radioBtn4.setVisible(false);
-//        
-        //cancelBtn.setVisible(false);
+        if (radioBtn1.isSelected() && answerList.get(0).getCorrect()) {
+            points++;
+        } else if (radioBtn2.isSelected() && answerList.get(1).getCorrect()) {
+            points++;
+        } else if (radioBtn3.isSelected() && answerList.get(2).getCorrect()) {
+            points++;
+        } else if (radioBtn4.isSelected() && answerList.get(3).getCorrect()) {
+            points++;
         }
-  
 
-//////Det funkar med array! typ...
-//        c = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
-//                .request(MediaType.APPLICATION_JSON)
-//                .get(String.class);
-//        //textarea.appendText(c);
-//        JSONParser parser = new JSONParser();
-//        try {
-//            Object object = parser.parse(c);
-//            JSONArray array = (JSONArray) object;
-//            JSONObject obj2 = (JSONObject) array.get(1);
-//            System.out.println(array.get(1));
-//            System.out.println(obj2);
-//            System.out.println("array: " + array);
-//
-//            List<Question> list = new ArrayList();
-//            list = array;
-//            System.out.println("Size " + list.size());
-//            System.out.println("tre " + list.get(3));
-//
-//        } catch (Exception e) {
-//
-//        }
-        
-        
-    
+        index++;
+        if (index < radioList.size()) {
+            qLeft.setText((index + 1) + "");
+
+            question = radioList.get(index);
+            label.setText(question.getQuestion());
+
+            answerList = new ArrayList();
+            for (Answer a : question.getAnswers()) {
+                answerList.add(a);
+            }
+
+            radioBtn1.setText(answerList.get(0).getAnswer());
+            radioBtn2.setText(answerList.get(1).getAnswer());
+            radioBtn3.setText(answerList.get(2).getAnswer());
+            radioBtn4.setText(answerList.get(3).getAnswer());
+
+            radioBtn1.setSelected(false);
+            radioBtn2.setSelected(false);
+            radioBtn3.setSelected(false);
+            radioBtn4.setSelected(false);
+
+        } //beräkna resultat och byta text på 
+        else {
+            label.setText("Du hade " + points + " rätt av " + radioList.size() + " frågor!");
+            nextBtn.setVisible(false);
+            cancelBtn.setVisible(false);
+            radioBtn1.setVisible(false);
+            radioBtn2.setVisible(false);
+            radioBtn3.setVisible(false);
+            radioBtn4.setVisible(false);
+        }
+
+    }
+
+    @FXML
+    public void cancelButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     public void showTableMenuButtonAction(ActionEvent event) throws IOException {
@@ -168,7 +170,7 @@ public class SceneTestController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
+
     @FXML
     public void backToStartTestButtonAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
@@ -188,7 +190,6 @@ public class SceneTestController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
 
     @FXML
     public void homeMenuButtonAction(ActionEvent event) throws IOException {
@@ -200,21 +201,18 @@ public class SceneTestController implements Initializable {
         stage.show();
     }
 
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        total.setText(""+index);
-                label.setWrapText(true);
+        //label.setWrapText(true);
 
         ToggleGroup radioGroup = new ToggleGroup();
         radioBtn1.setToggleGroup(radioGroup);
         radioBtn2.setToggleGroup(radioGroup);
         radioBtn3.setToggleGroup(radioGroup);
         radioBtn4.setToggleGroup(radioGroup);
-        questionList = FXCollections.observableArrayList();
 
         radioList = new ArrayList();
         GenericType<List<Question>> gt = new GenericType<List<Question>>() {
@@ -227,54 +225,33 @@ public class SceneTestController implements Initializable {
 
         for (Question q : c) {
             q.getQuestion();
-            q.getAnswers();            
-            if(q.getType().equals(RADIO_TYPE)){
+            q.getAnswers();
+            if (q.getType().equals(RADIO_TYPE)) {
                 radioList.add(q);
+
             }
         }
+        System.out.println(radioList.size());
+        for (Question q : radioList) {
+            System.out.println("frågetyp: " + q.getType());
+
+        }
+        question = radioList.get(0);
+        label.setText(question.getQuestion());
+
+        answerList = new ArrayList();
+        for (Answer a : question.getAnswers()) {
+            answerList.add(a);
+        }
+
+        radioBtn1.setText(answerList.get(0).getAnswer());
+        radioBtn2.setText(answerList.get(1).getAnswer());
+        radioBtn3.setText(answerList.get(2).getAnswer());
+        radioBtn4.setText(answerList.get(3).getAnswer());
+        index = 0;
+        count = 0;
+        total.setText("" + radioList.size());
+        qLeft.setText("1");
+
+    }
 }
-}
-
-//        String c;
-//        c = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
-//                .request(MediaType.APPLICATION_JSON)
-//                .get(String.class
-//                );
-//        JSONArray array = null;
-//        JSONParser parser = new JSONParser();
-//        try {
-//            Object object = parser.parse(c);
-//            array = (JSONArray) object;
-//        } catch (Exception e) {
-//
-//        }
-//        questionList = FXCollections.observableArrayList();
-//
-//        for (int i = 0; i < array.size(); i++) {
-//            JSONObject row = (JSONObject) array.get(i);
-//            String qstring = (String) (row.get("question"));
-//            String astring = (String) (row.get("answer"));
-//            String w1string = (String) (row.get("wrong1"));
-//            String w2string = (String) (row.get("wrong2"));
-//            String w3string = (String) (row.get("wrong3"));
-//            question = new Question();
-//            question.setQuestion(qstring);
-////            question.setAnswer(astring);
-////            question.setWrong1(w1string);
-////            question.setWrong2(w2string);
-////            question.setWrong3(w3string);
-//
-//            questionList.add(question);
-//            
-//            label.setText(question.getQuestion());
-//            radioBtn1.setText(question.getAnswer());
-//            radioBtn2.setText(question.getWrong1());
-//            radioBtn3.setText(question.getWrong2());
-//            radioBtn4.setText(question.getWrong3());
-
-        
-
-
-    
-
-

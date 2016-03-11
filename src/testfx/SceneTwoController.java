@@ -133,6 +133,11 @@ public class SceneTwoController implements Initializable {
         answerText2.clear();
         answerText3.clear();
         answerText4.clear();
+        
+        radiobutton1.setSelected(true);
+        radiobutton2.setSelected(false);
+        radiobutton3.setSelected(false);
+        radiobutton4.setSelected(false);
 
     }
 
@@ -197,7 +202,7 @@ public class SceneTwoController implements Initializable {
         radiobutton3.setToggleGroup(radioGroup);
         radiobutton4.setToggleGroup(radioGroup);
 
-
+        radiobutton1.setSelected(true);
     }
 
 }
