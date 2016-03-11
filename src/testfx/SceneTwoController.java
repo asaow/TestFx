@@ -148,7 +148,7 @@ public class SceneTwoController implements Initializable {
 
     @FXML
     public void createTestMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ListScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
@@ -197,7 +197,6 @@ public class SceneTwoController implements Initializable {
         radiobutton3.setToggleGroup(radioGroup);
         radiobutton4.setToggleGroup(radioGroup);
 
-        radiobutton1.setSelected(true);
 
     }
 

@@ -13,7 +13,7 @@ and open the template in the editor.
 }
 
 .button{
-    -fx-background-color:#707070;
+    -fx-background-color:#727272;
     -fx-text-fill: white;
 }
 
@@ -21,14 +21,17 @@ and open the template in the editor.
     -fx-background-color: #808080;
 }
 
-.button:focused {
-    -fx-background-color:#1d92b0;
+ button:focused {
+    -fx-background-color: #1d92b0;
+ }
+ 
+#homeMenuButton.button:focused {
+    -fx-background-color: transparent;
 }
 
-
-
-
-
+#backMenuButton.button:focused {
+    -fx-background-color: transparent;
+}
 
 .table-view{
    -fx-background-color: transparent;
@@ -39,7 +42,7 @@ and open the template in the editor.
 }
 
 .table-view .column-header-background{
-    -fx-background-color: linear-gradient(#505050 0%, #707070 100%);
+    -fx-background-color: #757575;
 }
 
 .table-view .column-header-background .label{

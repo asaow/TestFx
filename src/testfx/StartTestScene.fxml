@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.StartTestSceneController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #727272;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homeMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#homeMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
+               <font>
+                  <Font name="AppleGothic Regular" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Prov">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="checkBoxTestButton" alignment="CENTER" mnemonicParsing="false" onAction="#checkBoxTestAction" prefHeight="65.0" prefWidth="230.0" text="Starta CheckBox Prov!">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="radioTestButton" alignment="CENTER" mnemonicParsing="false" onAction="#radioTestAction" prefHeight="65.0" prefWidth="230.0" text="Starta RadioButton Prov!">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

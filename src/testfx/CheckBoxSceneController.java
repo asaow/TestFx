@@ -43,9 +43,6 @@ public class CheckBoxSceneController implements Initializable {
     @FXML
     private TextField answerText5;
     @FXML
-    private TextField answerText6;
-
-    @FXML
     private CheckBox checkbox1;
     @FXML
     private CheckBox checkbox2;
@@ -56,11 +53,11 @@ public class CheckBoxSceneController implements Initializable {
     @FXML
     private CheckBox checkbox5;
     @FXML
-    private CheckBox checkbox6;
-    @FXML
     private Button addButton;
     @FXML
-    private Button createTestMenuButton;
+    private Button startTestMenuButton;
+    @FXML
+    private Button radioButton;
     
     Question question;
 
@@ -140,8 +137,7 @@ public class CheckBoxSceneController implements Initializable {
         checkbox5.setSelected(false);
 
     }
-    @FXML
-    private Button radioButton;
+
 
     @FXML
     public void cancelButtonAction(ActionEvent event) throws IOException {
@@ -164,8 +160,8 @@ public class CheckBoxSceneController implements Initializable {
     }
 
     @FXML
-    public void createTestMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ListScene.fxml"));
+    public void startTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());

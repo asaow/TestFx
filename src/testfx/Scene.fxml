@@ -9,42 +9,38 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.SceneController">
-   <children>
-      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <left>
-            <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #707070;" BorderPane.alignment="CENTER">
-               <children>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Meny">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Prov">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </left>
-         <center>
-            <Label text="Hejsan!" BorderPane.alignment="CENTER">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.SceneController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #727272;" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Meny">
                <font>
-                  <Font name="Edo" size="40.0" />
+                  <Font name="Hiragino Sans W1" size="15.0" />
                </font>
-            </Label>
-         </center>
-      </BorderPane>
-   </children>
-</AnchorPane>
+            </Button>
+            <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="startTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#startTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Prov">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Label text="Hejsan!" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Edo" size="40.0" />
+         </font>
+      </Label>
+   </center>
+</BorderPane>

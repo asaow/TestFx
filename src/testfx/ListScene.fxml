@@ -12,7 +12,7 @@
    <children>
       <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
-            <VBox prefHeight="600.0" prefWidth="165.0" style="-fx-background-color: #707070;" BorderPane.alignment="CENTER_LEFT">
+            <VBox prefHeight="600.0" prefWidth="165.0" style="-fx-background-color: #727272;" BorderPane.alignment="CENTER_LEFT">
                <children>
                   <Button fx:id="homeMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#homeMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
                      <font>

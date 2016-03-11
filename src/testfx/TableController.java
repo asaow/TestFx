@@ -24,7 +24,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
@@ -45,15 +44,11 @@ public class TableController implements Initializable {
     @FXML
     private Button addQuestionsMenuButton;
     @FXML
-    private Button showQuestionsMenuButton;
-    @FXML
     private Button showTableMenuButton;
     @FXML
-    private Button showTestMenuButton;
+    private Button startTestMenuButton;
     @FXML
     private Button homeMenuButton;
-    @FXML
-    private Button createTestMenuButton;
     @FXML
     private Button deleteBtn;
     @FXML
@@ -61,7 +56,6 @@ public class TableController implements Initializable {
     @FXML
     private TableView<Question> tableView;
     @FXML
-   
     private TableColumn<Question, Integer> questionIdColumn;
     @FXML
     private TableColumn<Question, String> questionColumn;
@@ -84,19 +78,11 @@ public class TableController implements Initializable {
         System.out.println("deleted " + r.getStatus());
     }
 
-    @FXML
-    public void showTestMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("SceneTest.fxml"));
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
-    }
+
 
     @FXML
-    public void createTestMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ListScene.fxml"));
+    public void startTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
@@ -143,7 +129,7 @@ public class TableController implements Initializable {
             questionList.add(q);
         }
         
-        questionIdColumn.setCellValueFactory(new PropertyValueFactory<Question, Integer>("questionId"));
+        questionIdColumn.setCellValueFactory(new PropertyValueFactory<Question, Integer>("id"));
         questionColumn.setCellValueFactory(new PropertyValueFactory<Question, String>("question"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<Question, String>("type"));
         
@@ -151,117 +137,8 @@ public class TableController implements Initializable {
         questionColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         typeColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         
-        //        questionIdColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, Integer>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, Integer> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setId(t.getNewValue());
-//            }
-//        });
-//        questionColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, String> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setQuestion(t.getNewValue());
-//            }
-//        });
-//
-//        answerColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, String> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAnswer(t.getNewValue());
-//            }
-//        });
-
-        
         tableView.setItems(questionList);
-        
-        
-
-//        String c;
-//        c = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
-//                .request(MediaType.APPLICATION_JSON)
-//                .get(String.class);
-//        System.out.println(c);
-//        JSONArray array = null;
-//
-//        JSONParser parser = new JSONParser();
-//        try {
-//            Object object = parser.parse(c);
-//            array = (JSONArray) object;
-//
-//            JSONObject obj2 = (JSONObject) array.get(1);
-//
-//            System.out.println(array.get(1));
-//            System.out.println(obj2);
-//            System.out.println("array: " + array);
-//
-//            List<Question> list = new ArrayList();
-//            list.addAll(array);
-//            System.out.println("Size " + list.size());
-//            System.out.println("tre " + list.get(3));
-//
-//        } catch (Exception e) {
-//
-//        }
-        // list for all questions
 
     }
 
-
-//        courseIdColumn.setCellValueFactory(new PropertyValueFactory<Question, Integer>("courseId"));
-//        questionIdColumn.setCellValueFactory(new PropertyValueFactory<Question, Integer>("questionId"));
-//        questionColumn.setCellValueFactory(new PropertyValueFactory<Question, String>("question"));
-//        answerColumn.setCellValueFactory(new PropertyValueFactory<Question, String>("answer"));
-//        wrong1Column.setCellValueFactory(new PropertyValueFactory<Question, String>("wrong1"));
-//        wrong2Column.setCellValueFactory(new PropertyValueFactory<Question, String>("wrong2"));
-//        wrong3Column.setCellValueFactory(new PropertyValueFactory<Question, String>("wrong3"));
-//
-//        courseIdColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-//        questionIdColumn.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-//        questionColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-//        answerColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-//        wrong1Column.setCellFactory(TextFieldTableCell.forTableColumn());
-//        wrong2Column.setCellFactory(TextFieldTableCell.forTableColumn());
-//        wrong3Column.setCellFactory(TextFieldTableCell.forTableColumn());
-//
-//        courseIdColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, Integer>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, Integer> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setCourseId(t.getNewValue());
-//            }
-//        });
-//        questionIdColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, Integer>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, Integer> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setId(t.getNewValue());
-//            }
-//        });
-//        questionColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, String> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setQuestion(t.getNewValue());
-//            }
-//        });
-//
-//        answerColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, String> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setAnswer(t.getNewValue());
-//            }
-//        });
-//
-//        wrong1Column.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, String> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setWrong1(t.getNewValue());
-//            }
-//        });
-//
-//        wrong2Column.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, String> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setWrong2(t.getNewValue());
-//            }
-//        });
-//
-//        wrong3Column.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<Question, String>>() {
-//            public void handle(TableColumn.CellEditEvent<Question, String> t) {
-//                ((Question) t.getTableView().getItems().get(t.getTablePosition().getRow())).setWrong3(t.getNewValue());
-//            }
-//        });
-//        
-
-//
-//
-//    }
 }

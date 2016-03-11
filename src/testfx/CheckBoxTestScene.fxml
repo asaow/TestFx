@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.CheckBoxTestSceneController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #727272;">
+         <children>
+            <Button fx:id="backMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#backToStartTestButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
+               <font>
+                  <Font name="AppleGothic Regular" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Prov">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="600.0" prefWidth="640.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="67.0" prefWidth="580.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="60.0" textFill="#606060">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label text="/" textFill="#606060">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="50.0" />
+               </padding>
+            </HBox>
+            <Label alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="CheckBox fråga" textFill="#606060" wrapText="true">
+               <font>
+                  <Font name="Hiragino Sans W2" size="24.0" />
+               </font>
+            </Label>
+            <CheckBox mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font>
+            </CheckBox>
+            <CheckBox mnemonicParsing="false" text="CheckBox">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font>
+            </CheckBox>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Nästa">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="50.0" right="10.0" top="50.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

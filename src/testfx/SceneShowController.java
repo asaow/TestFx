@@ -111,59 +111,32 @@ public class SceneShowController implements Initializable {
 
      
 //Det funkar med array! typ...
-        c = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
-                .request(MediaType.APPLICATION_JSON)
-                .get(String.class);
-        textarea.appendText(c);
-        JSONParser parser = new JSONParser();
-        try {
-            Object object = parser.parse(c);
-            JSONArray array = (JSONArray) object;
-            JSONObject obj2 = (JSONObject) array.get(1);
-            System.out.println(array.get(1));
-            System.out.println(obj2);
-            System.out.println("array: " + array);
-
-            List<Question> list = new ArrayList();
-            list = array;
-            System.out.println("Size " + list.size());
-            System.out.println("tre " + list.get(3));
-
-//            textarea.appendText(((Question) array.get(0)).toString());
-//            System.out.println(array.get(0).toString());
-        } catch (Exception e) {
-
-        }
-
-
-//         String cc = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
+//        c = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
 //                .request(MediaType.APPLICATION_JSON)
 //                .get(String.class);
-//        JSONParser jo = new JSONParser();
-//        try{
-//            Object object = jo.parse(cc);
-//        JSONArray array = (JSONArray)object;
-//        textarea.appendText(array.get(0).toString());
-//        
-//Post fråga
-//        Question que= new Question(1, 9, "frågaaaaa9", "räääättt","Feeel1", "Feeel2", "Feeel3" );
-//        Question question;
-//        question = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses/1/questions")
-//                .request()
-//                .post(Entity.entity(que, MediaType.APPLICATION_JSON) , Question.class);
-//                System.out.println(question.getQuestion());
+//        textarea.appendText(c);
+//        JSONParser parser = new JSONParser();
+//        try {
+//            Object object = parser.parse(c);
+//            JSONArray array = (JSONArray) object;
+//            JSONObject obj2 = (JSONObject) array.get(1);
+//            System.out.println(array.get(1));
+//            System.out.println(obj2);
+//            System.out.println("array: " + array);
+//
+//            List<Question> list = new ArrayList();
+//            list = array;
+//            System.out.println("Size " + list.size());
+//            System.out.println("tre " + list.get(3));
+//
+////            textarea.appendText(((Question) array.get(0)).toString());
+////            System.out.println(array.get(0).toString());
+//        } catch (Exception e) {
+//
+//        }
 
 
-Course ccc = new Course(5, "helo", 9);
-        Course course;
-        course = TestFx.client.target("http://localhost:8080/ExamServer/webresources/courses")
-                .request()
-                .post(Entity.entity( ccc, MediaType.APPLICATION_JSON) , Course.class);
-        System.out.println("course: "+course.getName());
-//        }
-//        catch(Exception e)
-//        {
-//        }
+
     }
 
 }

@@ -8,196 +8,196 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.SceneTwoController">
-   <children>
-      <BorderPane prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <center>
-            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.SceneTwoController">
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Label prefHeight="93.0" prefWidth="414.0" text="Lägg till radiobutton fråga" textFill="#555555">
-                           <font>
-                              <Font name="Hiragino Sans W0" size="30.0" />
-                           </font>
-                        </Label>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="98.0" prefWidth="168.0" />
-                     </children>
-                  </HBox>
-                  <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Fråga" textFill="#777777">
+                  <Label prefHeight="93.0" prefWidth="414.0" text="Lägg till radiobutton fråga" textFill="#555555">
+                     <font>
+                        <Font name="Hiragino Sans W0" size="30.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="98.0" prefWidth="168.0" />
+               </children>
+            </HBox>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Fråga" textFill="#777777">
+               <font>
+                  <Font name="Edo" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="questionText">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="25.0" prefWidth="600.0">
+               <children>
+                  <Label text="Svar" textFill="#777777">
                      <font>
                         <Font name="Edo" size="16.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
                   </Label>
-                  <TextField fx:id="questionText">
+                  <RadioButton fx:id="radiobutton1" mnemonicParsing="false" text="Rätt">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Hiragino Sans W1" size="13.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <HBox prefHeight="25.0" prefWidth="600.0">
+                  </RadioButton>
+               </children>
+            </HBox>
+            <TextField fx:id="answerText1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="25.0" prefWidth="600.0">
+               <children>
+                  <Label text="Svar" textFill="#777777">
+                     <font>
+                        <Font name="Edo" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radiobutton2" mnemonicParsing="false" text="Rätt">
+                     <font>
+                        <Font name="Hiragino Sans W1" size="13.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <TextField fx:id="answerText2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="25.0" prefWidth="600.0">
+               <children>
+                  <Label text="Svar" textFill="#777777">
+                     <font>
+                        <Font name="Edo" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radiobutton3" mnemonicParsing="false" text="Rätt">
+                     <font>
+                        <Font name="Hiragino Sans W1" size="13.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <TextField fx:id="answerText3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox prefHeight="25.0" prefWidth="600.0">
+               <children>
+                  <Label text="Svar" textFill="#777777">
+                     <font>
+                        <Font name="Edo" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radiobutton4" mnemonicParsing="false" text="Rätt">
+                     <font>
+                        <Font name="Hiragino Sans W2" size="13.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <TextField fx:id="answerText4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="591.0">
                      <children>
-                        <Label text="Svar" textFill="#777777">
+                        <Button fx:id="cancelButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="93.0" text="Avbryt">
                            <font>
-                              <Font name="Edo" size="16.0" />
+                              <Font name="Hiragino Sans W1" size="14.0" />
                            </font>
                            <HBox.margin>
-                              <Insets right="30.0" />
+                              <Insets right="20.0" />
                            </HBox.margin>
-                        </Label>
-                        <RadioButton fx:id="radiobutton1" mnemonicParsing="false" text="Rätt">
-                           <font>
-                              <Font name="Hiragino Sans W1" size="13.0" />
-                           </font></RadioButton>
-                     </children>
-                  </HBox>
-                  <TextField fx:id="answerText1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <HBox prefHeight="25.0" prefWidth="600.0">
-                     <children>
-                        <Label text="Svar" textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="30.0" />
-                           </HBox.margin>
-                        </Label>
-                        <RadioButton fx:id="radiobutton2" mnemonicParsing="false" text="Rätt">
-                           <font>
-                              <Font name="Hiragino Sans W1" size="13.0" />
-                           </font></RadioButton>
-                     </children>
-                  </HBox>
-                  <TextField fx:id="answerText2">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <HBox prefHeight="25.0" prefWidth="600.0">
-                     <children>
-                        <Label text="Svar" textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="30.0" />
-                           </HBox.margin>
-                        </Label>
-                        <RadioButton fx:id="radiobutton3" mnemonicParsing="false" text="Rätt">
-                           <font>
-                              <Font name="Hiragino Sans W1" size="13.0" />
-                           </font></RadioButton>
-                     </children>
-                  </HBox>
-                  <TextField fx:id="answerText3">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets bottom="20.0" />
-                     </VBox.margin>
-                  </TextField>
-                  <HBox prefHeight="25.0" prefWidth="600.0">
-                     <children>
-                        <Label text="Svar" textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="30.0" />
-                           </HBox.margin>
-                        </Label>
-                        <RadioButton fx:id="radiobutton4" mnemonicParsing="false" text="Rätt">
-                           <font>
-                              <Font name="Hiragino Sans W2" size="13.0" />
-                           </font></RadioButton>
-                     </children>
-                  </HBox>
-                  <TextField fx:id="answerText4">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="591.0">
+                        </Button>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="93.0" prefWidth="459.0">
                            <children>
-                              <Button fx:id="cancelButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="93.0" text="Avbryt">
+                              <Button fx:id="checkBoxButton" mnemonicParsing="false" onAction="#showCheckBoxButtonAction" prefHeight="40.0" prefWidth="100.0" text="CheckBox">
                                  <font>
-                                    <Font name="Hiragino Sans W1" size="14.0" />
+                                    <Font name="Hiragino Sans W2" size="14.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets right="20.0" />
                                  </HBox.margin>
                               </Button>
-                              <HBox alignment="BOTTOM_RIGHT" prefHeight="93.0" prefWidth="459.0">
-                                 <children>
-                                    <Button fx:id="checkBoxButton" mnemonicParsing="false" onAction="#showCheckBoxButtonAction" prefHeight="40.0" prefWidth="100.0" text="CheckBox">
-                                       <font>
-                                          <Font name="Hiragino Sans W2" size="14.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets right="20.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                    <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addQuestionButtonAction" prefHeight="40.0" prefWidth="104.0" text="Lägg till">
-                                       <font>
-                                          <Font name="Hiragino Sans W2" size="14.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets right="20.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                 </children>
-                              </HBox>
+                              <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addQuestionButtonAction" prefHeight="40.0" prefWidth="104.0" text="Lägg till">
+                                 <font>
+                                    <Font name="Hiragino Sans W2" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
                            </children>
                         </HBox>
                      </children>
                   </HBox>
                </children>
-               <BorderPane.margin>
-                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-               </BorderPane.margin>
-            </VBox>
-         </center>
-         <left>
-            <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #707070;" BorderPane.alignment="TOP_LEFT">
-               <children>
-                  <Button fx:id="homeMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#homeMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
-                     <font>
-                        <Font name="AppleGothic Regular" size="20.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Lägg till frågor">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Prov">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-               </children>
-            </VBox>
-         </left>
-      </BorderPane>
-   </children>
-</AnchorPane>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #727272;" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <Button fx:id="homeMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#homeMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
+               <font>
+                  <Font name="AppleGothic Regular" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Lägg till frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="createTestMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#createTestMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Prov">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

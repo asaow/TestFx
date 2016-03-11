@@ -16,103 +16,106 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.SceneTestController">
-   <children>
-      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <center>
-            <VBox alignment="CENTER_LEFT" prefHeight="133.0" prefWidth="149.0" spacing="10.0" BorderPane.alignment="CENTER">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.SceneTestController">
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="600.0" prefWidth="640.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="67.0" prefWidth="580.0">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="67.0" prefWidth="580.0">
-                     <children>
-                        <Label fx:id="qLeft">
-                           <font>
-                              <Font size="36.0" />
-                           </font>
-                        </Label>
-                        <Label text="/">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="total">
-                           <font>
-                              <Font size="36.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets right="50.0" />
-                     </padding>
-                  </HBox>
-                  <Label fx:id="label" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="Starta Prov!" textFill="#606060">
+                  <Label fx:id="qLeft" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
                      <font>
-                        <Font name="Edo" size="24.0" />
+                        <Font size="36.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets right="50.0" />
-                     </VBox.margin>
                   </Label>
-                  <RadioButton fx:id="radioBtn1" mnemonicParsing="false" text="RadioButton" />
-                  <RadioButton fx:id="radioBtn2" mnemonicParsing="false" text="RadioButton" />
-                  <RadioButton fx:id="radioBtn3" mnemonicParsing="false" text="RadioButton" />
-                  <RadioButton fx:id="radioBtn4" mnemonicParsing="false" text="RadioButton" />
-                  <HBox alignment="BOTTOM_LEFT" prefHeight="70.0" prefWidth="600.0">
-                     <children>
-                        <Button fx:id="cancelBtn" mnemonicParsing="false" text="Avbryt">
-                           <font>
-                              <Font name="Edo" size="20.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="10.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="nextBtn" mnemonicParsing="false" onAction="#nextQuestionAction" text="Nästa">
-                           <font>
-                              <Font name="Edo" size="20.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
+                  <Label text="/" textFill="#606060">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="total" alignment="CENTER" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
                </children>
                <padding>
-                  <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                  <Insets right="50.0" />
                </padding>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-            </VBox>
-         </center>
-         <left>
-            <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #707070;" BorderPane.alignment="CENTER">
+            </HBox>
+            <Label fx:id="label" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="Radiobutton fråga" textFill="#606060" wrapText="true">
+               <font>
+                  <Font name="Hiragino Sans W2" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </Label>
+            <RadioButton fx:id="radioBtn1" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioBtn2" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioBtn3" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioBtn4" mnemonicParsing="false" text="RadioButton">
+               <font>
+                  <Font name="Hiragino Sans W2" size="16.0" />
+               </font></RadioButton>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="70.0" prefWidth="600.0">
                <children>
-                  <Button fx:id="homeMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#homeMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
+                  <Button fx:id="cancelBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
                      <font>
-                        <Font name="AppleGothic Regular" size="20.0" />
+                        <Font name="Hiragino Sans W1" size="16.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
                   </Button>
-                  <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
+                  <Button fx:id="nextBtn" alignment="CENTER" mnemonicParsing="false" onAction="#nextQuestionAction" prefHeight="40.0" prefWidth="85.0" text="Nästa">
                      <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Table">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Skapa prov">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
-                     </font>
-                  </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Visa prov">
-                     <font>
-                        <Font name="Hiragino Sans W1" size="15.0" />
+                        <Font name="Hiragino Sans W1" size="16.0" />
                      </font>
                   </Button>
                </children>
-            </VBox>
-         </left>
-      </BorderPane>
-   </children>
-</AnchorPane>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="50.0" right="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #727272;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="backMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#backToStartTestButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
+               <font>
+                  <Font name="AppleGothic Regular" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1d92b0;" text="Prov">
+               <font>
+                  <Font name="Hiragino Sans W1" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

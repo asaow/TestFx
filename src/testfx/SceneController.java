@@ -33,17 +33,14 @@ public class SceneController implements Initializable {
     private Button addQuestionsMenuButton;
     @FXML
     private Button showQuestionsMenuButton;
-    
     @FXML
     private Button showTableMenuButton;
-    
     @FXML
     private Button showTestMenuButton;
-    
     @FXML
     private Button homeMenuButton;
     @FXML
-    private Button createTestMenuButton;
+    private Button startTestMenuButton;
     /**
      * Initializes the controller class.
      */
@@ -58,19 +55,9 @@ public class SceneController implements Initializable {
             stage.show(); 
     }
     
-//     @FXML
-//    public void showQuestionsMenuButtonAction(ActionEvent event) throws IOException{
-//        Parent root = FXMLLoader.load(getClass().getResource("CheckBoxScene.fxml"));
-//            Scene scene = new Scene(root);
-//            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-//            stage.setScene(scene);
-//            stage.show(); 
-//    }
-    
     @FXML
-    public void createTestMenuButtonAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("ListScene.fxml"));
+    public void startTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
