@@ -221,7 +221,7 @@ public class CheckBoxTestSceneController implements Initializable {
 
         index = 0;
         count = 0;
-        total.setText("" + checkboxList.size());
+        total.setText("/ " + checkboxList.size());
         qLeft.setText("1");
     }
 

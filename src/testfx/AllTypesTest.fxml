@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller=".AllTypesTestController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testfx.AllTypesTestController">
    <center>
       <VBox prefHeight="600.0" prefWidth="640.0" spacing="10.0">
          <children>
             <HBox alignment="TOP_RIGHT" prefHeight="67.0" prefWidth="580.0">
                <children>
-                  <Label prefHeight="50.0" prefWidth="60.0" textFill="#606060">
+                  <Label fx:id="qLeft" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label text="/" textFill="#606060">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
+                  <Label fx:id="total" alignment="CENTER" prefHeight="50.0" prefWidth="60.0" textFill="#606060">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -35,54 +31,54 @@
                   <Insets right="50.0" />
                </padding>
             </HBox>
-            <Label alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="Type fråga" textFill="#606060" wrapText="true">
+            <Label fx:id="label" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="530.0" text="Type fråga" textFill="#606060" wrapText="true">
                <font>
                   <Font name="Hiragino Sans W2" size="24.0" />
                </font>
             </Label>
             <VBox alignment="CENTER_LEFT" prefHeight="267.0" prefWidth="580.0">
                <children>
-                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="CheckBox">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </CheckBox>
-                  <RadioButton mnemonicParsing="false" text="RadioButton">
+                  <RadioButton fx:id="radioBtn1" mnemonicParsing="false" text="RadioButton">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </RadioButton>
-                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="CheckBox">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </CheckBox>
-                  <RadioButton mnemonicParsing="false" text="RadioButton">
+                  <RadioButton fx:id="radioBtn2" mnemonicParsing="false" text="RadioButton">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </RadioButton>
-                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="CheckBox">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </CheckBox>
-                  <RadioButton mnemonicParsing="false" text="RadioButton">
+                  <RadioButton fx:id="radioBtn3" mnemonicParsing="false" text="RadioButton">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </RadioButton>
-                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="CheckBox">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </CheckBox>
-                  <RadioButton mnemonicParsing="false" text="RadioButton">
+                  <RadioButton fx:id="radioBtn4" mnemonicParsing="false" text="RadioButton">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
                   </RadioButton>
-                  <CheckBox mnemonicParsing="false" text="CheckBox">
+                  <CheckBox fx:id="checkbox5" mnemonicParsing="false" text="CheckBox">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
@@ -91,7 +87,7 @@
             </VBox>
             <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
+                  <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="40.0" prefWidth="85.0" text="Avbryt">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
@@ -99,7 +95,7 @@
                         <Insets right="40.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" text="Nästa">
+                  <Button fx:id="nextBtn" mnemonicParsing="false" onAction="#nextQuestionAction" prefHeight="40.0" prefWidth="85.0" text="Nästa">
                      <font>
                         <Font name="Hiragino Sans W2" size="16.0" />
                      </font>
@@ -118,17 +114,17 @@
    <left>
       <VBox prefHeight="400.0" prefWidth="160.0" style="-fx-background-color: #727272;">
          <children>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="&lt;">
+            <Button fx:id="backMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#backToStartTestButtonAction" prefHeight="50.0" prefWidth="200.0" text="&lt;">
                <font>
                   <Font name="AppleGothic Regular" size="20.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
+            <Button fx:id="addQuestionsMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#addQuestionsMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Lägg till frågor">
                <font>
                   <Font name="Hiragino Sans W1" size="15.0" />
                </font>
             </Button>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
+            <Button fx:id="showTableMenuButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#showTableMenuButtonAction" prefHeight="50.0" prefWidth="200.0" text="Visa frågor">
                <font>
                   <Font name="Hiragino Sans W1" size="15.0" />
                </font>

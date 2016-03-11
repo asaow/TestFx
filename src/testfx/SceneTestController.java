@@ -218,7 +218,7 @@ public class SceneTestController implements Initializable {
         radioBtn4.setText(answerList.get(3).getAnswer());
         index = 0;
         count = 0;
-        total.setText("" + radioList.size());
+        total.setText("/ " + radioList.size());
         qLeft.setText("1");
 
     }

@@ -34,7 +34,9 @@ public class StartTestSceneController implements Initializable {
     @FXML
     private Button radioTestButton;
     @FXML
-    private Button checkBoxTestButton;    
+    private Button checkBoxTestButton;   
+    @FXML
+    private Button allTypesTestButton;    
             
     @FXML
     public void showTestMenuButtonAction(ActionEvent event) throws IOException {
@@ -54,6 +56,17 @@ public class StartTestSceneController implements Initializable {
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
+    }
+    
+     @FXML
+    public void AllTypesTestAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("AllTypesTest.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+       
     }
 
     @FXML
