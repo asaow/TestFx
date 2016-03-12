@@ -41,6 +41,9 @@ public class CheckBoxTestSceneController implements Initializable {
     @FXML
     private Button backMenuButton;
     @FXML
+    private Button startTestMenuButton;
+        
+    @FXML
     private Button nextButton;
     @FXML
     private Button cancelButton;
@@ -129,6 +132,8 @@ public class CheckBoxTestSceneController implements Initializable {
             checkbox3.setVisible(false);
             checkbox4.setVisible(false);
             checkbox5.setVisible(false);
+            qLeft.setVisible(false);
+            total.setVisible(false);
 
         }
     }
@@ -136,6 +141,16 @@ public class CheckBoxTestSceneController implements Initializable {
     @FXML
     public void cancelButtonAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    @FXML
+    public void startTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());

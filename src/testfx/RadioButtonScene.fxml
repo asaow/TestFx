@@ -16,7 +16,7 @@
                <children>
                   <Label prefHeight="93.0" prefWidth="414.0" text="Lägg till radiobutton fråga" textFill="#555555">
                      <font>
-                        <Font name="Hiragino Sans W0" size="30.0" />
+                        <Font size="30.0" />
                      </font>
                   </Label>
                   <VBox alignment="CENTER_RIGHT" prefHeight="98.0" prefWidth="168.0" />
@@ -24,7 +24,7 @@
             </HBox>
             <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Fråga" textFill="#777777">
                <font>
-                  <Font name="Edo" size="16.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             <TextField fx:id="questionText">
@@ -38,12 +38,12 @@
             <HBox prefHeight="25.0" prefWidth="600.0">
                <children>
                   <Label text="Svar" textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
                      <HBox.margin>
                         <Insets right="30.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                   </Label>
                   <RadioButton fx:id="radiobutton1" mnemonicParsing="false" text="Rätt">
                      <font>
@@ -63,12 +63,12 @@
             <HBox prefHeight="25.0" prefWidth="600.0">
                <children>
                   <Label text="Svar" textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
                      <HBox.margin>
                         <Insets right="30.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                   </Label>
                   <RadioButton fx:id="radiobutton2" mnemonicParsing="false" text="Rätt">
                      <font>
@@ -88,12 +88,12 @@
             <HBox prefHeight="25.0" prefWidth="600.0">
                <children>
                   <Label text="Svar" textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
                      <HBox.margin>
                         <Insets right="30.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                   </Label>
                   <RadioButton fx:id="radiobutton3" mnemonicParsing="false" text="Rätt">
                      <font>
@@ -113,12 +113,12 @@
             <HBox prefHeight="25.0" prefWidth="600.0">
                <children>
                   <Label text="Svar" textFill="#777777">
-                     <font>
-                        <Font name="Edo" size="16.0" />
-                     </font>
                      <HBox.margin>
                         <Insets right="30.0" />
                      </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
                   </Label>
                   <RadioButton fx:id="radiobutton4" mnemonicParsing="false" text="Rätt">
                      <font>

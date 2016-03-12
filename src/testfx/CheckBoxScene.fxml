@@ -18,14 +18,14 @@
                      <children>
                         <Label prefHeight="80.0" prefWidth="384.0" text="Lägg till checkbox fråga" textFill="#555555">
                            <font>
-                              <Font name="Hiragino Sans W0" size="30.0" />
+                              <Font size="30.0" />
                            </font>
                         </Label>
                      </children>
                   </HBox>
                   <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Fråga" textFill="#777777">
                      <font>
-                        <Font name="Edo" size="16.0" />
+                        <Font size="16.0" />
                      </font>
                   </Label>
                   <TextField fx:id="questionText">
@@ -39,12 +39,12 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
                      <children>
                         <Label text="Svar " textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
                         </Label>
                         <CheckBox fx:id="checkbox1" mnemonicParsing="false" text="Rätt">
                            <font>
@@ -64,12 +64,12 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
                      <children>
                         <Label text="Svar " textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
                         </Label>
                         <CheckBox fx:id="checkbox2" mnemonicParsing="false" text="Rätt">
                            <font>
@@ -89,12 +89,12 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
                      <children>
                         <Label text="Svar " textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
                         </Label>
                         <CheckBox fx:id="checkbox3" mnemonicParsing="false" text="Rätt">
                            <font>
@@ -114,12 +114,12 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
                      <children>
                         <Label text="Svar " textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
                         </Label>
                         <CheckBox fx:id="checkbox4" mnemonicParsing="false" text="Rätt">
                            <font>
@@ -139,12 +139,12 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
                      <children>
                         <Label text="Svar " textFill="#777777">
-                           <font>
-                              <Font name="Edo" size="16.0" />
-                           </font>
                            <HBox.margin>
                               <Insets right="20.0" />
                            </HBox.margin>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
                         </Label>
                         <CheckBox fx:id="checkbox5" mnemonicParsing="false" text="Rätt">
                            <font>

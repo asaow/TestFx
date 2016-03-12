@@ -47,6 +47,8 @@ public class SceneTestController implements Initializable {
     @FXML
     private Button backMenuButton;
     @FXML
+    private Button startTestMenuButton;
+    @FXML
     private Label total;
     @FXML
     private Label qLeft;
@@ -117,6 +119,8 @@ public class SceneTestController implements Initializable {
             radioBtn2.setVisible(false);
             radioBtn3.setVisible(false);
             radioBtn4.setVisible(false);
+            qLeft.setVisible(false);
+            total.setVisible(false);
         }
 
     }
@@ -134,6 +138,16 @@ public class SceneTestController implements Initializable {
     @FXML
     public void showTableMenuButtonAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+        @FXML
+    public void startTestMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
