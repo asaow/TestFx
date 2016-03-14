@@ -32,7 +32,7 @@ import static testfx.Question.RADIO_TYPE;
 /**
  * FXML Controller class
  *
- * @author asa
+ * @author Grupp 2
  */
 public class AllTypesTestController implements Initializable {
 

@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author Loki
+ * @author Grupp 2
  */
 public class StartTestSceneController implements Initializable {
     @FXML

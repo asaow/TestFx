@@ -7,7 +7,7 @@ package testfx;
 
 /**
  *
- * @author Loki
+ * @author Grupp 2
  */
 public class Course {
     private int id;

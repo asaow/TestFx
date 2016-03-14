@@ -22,7 +22,7 @@ import java.util.Collection;
 
 /**
  *
- * @author Loki
+ * @author Grupp 2
  */
 
 public class Question implements Serializable {

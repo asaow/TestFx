@@ -21,9 +21,8 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author Loki
+ * @author Grupp 2
  */
-
 //Startsida
 public class SceneController implements Initializable {
 
@@ -39,20 +38,17 @@ public class SceneController implements Initializable {
     private Button homeMenuButton;
     @FXML
     private Button startTestMenuButton;
-    /**
-     * Initializes the controller class.
-     */
-    
+
     @FXML
-    public void addQuestionsMenuButtonAction(ActionEvent event) throws IOException{
-       Parent root = FXMLLoader.load(getClass().getResource("RadioButtonScene.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show(); 
+    public void addQuestionsMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("RadioButtonScene.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
     }
-    
+
     @FXML
     public void startTestMenuButtonAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("StartTestScene.fxml"));
@@ -62,21 +58,23 @@ public class SceneController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    
+
     @FXML
-    public void showTableMenuButtonAction(ActionEvent event) throws IOException{
-       Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
-            stage.setScene(scene);
-            stage.show(); 
+    public void showTableMenuButtonAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Table.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene.getStylesheets().add(getClass().getResource("SceneCascadeStyleSheet.css").toExternalForm());
+        stage.setScene(scene);
+        stage.show();
     }
-    
-    
+
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-    }    
-    
+    }
+
 }

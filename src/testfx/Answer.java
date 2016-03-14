@@ -11,7 +11,7 @@ import testfx.Question;
 
 /**
  *
- * @author Loki
+ * @author Grupp 2
  */
 
 public class Answer {

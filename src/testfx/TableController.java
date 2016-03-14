@@ -34,7 +34,7 @@ import javax.ws.rs.core.Response;
 /**
  * FXML Controller class
  *
- * @author Loki
+ * @author Grupp 2
  */
 public class TableController implements Initializable {
 

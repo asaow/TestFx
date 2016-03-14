@@ -28,7 +28,7 @@ import static testfx.Question.RADIO_TYPE;
 /**
  * FXML Controller class
  *
- * @author Loki
+ * @author Grupp 2
  */
 //Controller till RadiobuttonScene 
 public class SceneTwoController implements Initializable {

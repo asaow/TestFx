@@ -28,7 +28,7 @@ import static testfx.Question.CHECKBOX_TYPE;
 /**
  * FXML Controller class
  *
- * @author Loki
+ * @author Grupp 2
  */
 public class CheckBoxTestSceneController implements Initializable {
 

@@ -17,7 +17,7 @@ import javax.ws.rs.client.Client;
 
 /**
  *
- * @author Loki
+ * @author Grupp 2
  */
 public class TestFx extends Application {
     public static Client client;
